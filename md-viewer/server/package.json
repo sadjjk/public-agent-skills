@@ -1,0 +1,16 @@
+{
+  "name": "md-viewer-server",
+  "version": "1.0.0",
+  "description": "Local server for the md-viewer Claude Code skill",
+  "main": "viewer-server.js",
+  "scripts": {
+    "start": "node viewer-server.js",
+    "setup": "node setup.js"
+  },
+  "keywords": [],
+  "author": "Mxcks",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

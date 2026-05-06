@@ -8,7 +8,7 @@
 
 | Skill | 说明 | 关键特性 |
 |-------|------|----------|
-| [md-viewer](./md-viewer/) | 本地 Markdown 文件浏览器 <br/> *✨ 给 Markdown 开扇窗* | GFM 渲染、Mermaid 图表、目录导航、图片放大、文件浏览、自动刷新、主题切换 |
+| [md-viewer](./md-viewer/) | **✨ 给 Markdown 开扇窗** <br/> 本地 Markdown 文件浏览器 | GFM 渲染、Mermaid 图表、目录导航、图片放大、文件浏览、自动刷新、主题切换 <br/> ![preview](./md-viewer/imgs/预览页.jpg) |
 
 ### 📊 数据类
 

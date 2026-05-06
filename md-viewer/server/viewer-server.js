@@ -918,6 +918,20 @@ async function loadContent() {
         let html = marked.parse(data.content);
         document.getElementById('markdown-content').innerHTML = html;
 
+        // Fix HTML <img> relative src → /api/image?path=
+        document.querySelectorAll('#markdown-content img').forEach(img => {
+            const src = img.getAttribute('src');
+            if (src && !src.startsWith('http://') && !src.startsWith('https://') && !src.startsWith('data:') && !src.startsWith('/api/')) {
+                let absPath;
+                if (src.startsWith('/')) {
+                    absPath = src;
+                } else {
+                    absPath = currentDir + '/' + src.split('./').join('');
+                }
+                img.setAttribute('src', '/api/image?path=' + encodeURIComponent(absPath));
+            }
+        });
+
         // Mermaid
         document.querySelectorAll('.language-mermaid').forEach(block => {
             const parent = block.parentElement;
